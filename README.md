@@ -1,1 +1,1 @@
-[![CI Pipeline](https://github.com/Storming7/math-ci-team0/actions/workflows/ci.yml/badge.svg?branch=main&event=status)](https://github.com/Storming7/math-ci-team0/actions/workflows/ci.yml)
+[![CI Pipeline](https://github.com/Storming7/math-ci-team0/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Storming7/math-ci-team0/actions/workflows/ci.yml)
