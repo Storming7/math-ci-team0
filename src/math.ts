@@ -1,5 +1,3 @@
-
-
 export function add(a: number, b: number): number {
   return a + b;
 }
@@ -45,7 +43,8 @@ export function average(numbers: Array<number>): number | null {
 }
 
 export function clamp(value: number, min: number, max: number): number | null {
-  if (typeof value !== "number") { return null
+  if (typeof value !== "number") {
+    return null;
   }
   if (value < min) {
     return min;
@@ -53,4 +52,25 @@ export function clamp(value: number, min: number, max: number): number | null {
     return max;
   }
   return value;
+}
+
+export function quadratic(
+  a: number,
+  b: number,
+  c: number,
+): Array<number> | null {
+  if (c === 0) {
+    return null;
+  }
+
+  const discriminant = b ** 2 - 4 * a * c;
+
+  if (discriminant < 0) {
+    return null;
+  }
+
+  const quadPos = (-b + Math.sqrt(discriminant)) / (2 * a);
+  const quadNeg = (-b - Math.sqrt(discriminant)) / (2 * a);
+
+  return [quadPos, quadNeg];
 }

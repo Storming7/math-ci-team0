@@ -8,6 +8,7 @@ import {
   power,
   average,
   clamp,
+  quadratic,
 } from "./math";
 
 describe("add", () => {
@@ -87,5 +88,21 @@ describe("clamp", () => {
 
   it("returns value while in range", () => {
     expect(clamp(1, 0, 100)).toBe(1);
+  });
+});
+
+describe("quad", () => {
+  it("returns quadratic answer", () => {
+    expect(quadratic(-100, -10, 1)).toEqual([
+      -0.16180339887498948, 0.06180339887498949,
+    ]);
+  });
+
+  it("returns null if discriment is negative", () => {
+    expect(quadratic(1, 0, 100)).toBeNull();
+  });
+
+  it("returns null if c is 0", () => {
+    expect(quadratic(1, 0, 0)).toBeNull();
   });
 });
